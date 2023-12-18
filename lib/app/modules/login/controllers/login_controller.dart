@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 
 class LoginController extends GetxController {
   RxBool loading = false.obs;
-  RxBool rememberMeFlag = false.obs;
   RxBool obscureText = true.obs;
   late TextEditingController phoneController, passwordController;
   LoginModel? user;
@@ -59,7 +58,7 @@ class LoginController extends GetxController {
         // if (rememberMeFlag.value) {
           Preference.setLoginPhone(phoneController.text);
           Preference.setLoginPass(passwordController.text);
-          Preference.setRememberMeFlag(true);
+          // Preference.setRememberMeFlag(true);
           Preference.setLoggedInFlag(true);
           Preference.setUserLocation(user?.location as bool);
         // }
@@ -92,9 +91,7 @@ class LoginController extends GetxController {
     }
   }
 
-  void checkMark() {
-    rememberMeFlag.toggle();
-  }
+
 
   void showPassword() {
     obscureText.toggle();

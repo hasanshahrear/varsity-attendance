@@ -23,8 +23,8 @@ class SplashView extends GetView<SplashController> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SvgPicture.asset(
-                    'assets/svgs/logo.svg',
+                  Image.asset(
+                    'assets/images/logo.png',
                     width: 210,
                     fit: BoxFit.fitWidth,
                   ),
@@ -44,7 +44,7 @@ class SplashView extends GetView<SplashController> {
           const Expanded(
             flex: 1,
             child: Center(
-              child: Text("DEVELOPED BY FREELANCER IT", style: TextStyle(
+              child: Text("DEVELOPED BY BUBT", style: TextStyle(
                 fontSize: 12.0,
                 color: Colors.black54,
                 fontWeight: FontWeight.w600,

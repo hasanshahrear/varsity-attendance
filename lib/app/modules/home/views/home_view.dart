@@ -35,9 +35,9 @@ class HomeView extends GetView<HomeController> {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Welcome",
-                    style: const TextStyle(
+                    style:  TextStyle(
                       color: Color.fromRGBO(1, 166, 125, 1),
                       letterSpacing: 1,
                     ),
@@ -202,86 +202,6 @@ class HomeView extends GetView<HomeController> {
                         children: [
                           Row(
                             children: [
-                              Expanded(
-                                flex: 3,
-                                child: MaterialButton(
-                                  onPressed: () async {
-                                    await Get.dialog(TextInputDialog());
-                                  },
-                                  color: Colors.pinkAccent,
-                                  height: (50.0),
-                                  textColor: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(7.0),
-                                  ),
-                                  child: const Text("Station Leave"),
-                                ),
-                              ),
-                              const SizedBox(width: 12.0),
-                              Expanded(
-                                flex: 3,
-                                child: MaterialButton(
-                                  onPressed: () async {
-                                    AwesomeDialog(
-                                      context: context,
-                                      dialogType: DialogType.question,
-                                      animType: AnimType.rightSlide,
-                                      title: 'Are you sure?',
-                                      desc: 'You\'re in office',
-                                      btnCancelOnPress: () {},
-                                      btnOkOnPress: () async {
-                                        _stationLeaveController.stationBack();
-                                      },
-                                      btnOkText: "In Office",
-                                      btnOkColor: Colors.lightGreen,
-                                    ).show();
-                                  },
-                                  color: Colors.indigoAccent,
-                                  height: (50.0),
-                                  textColor: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(7.0),
-                                  ),
-                                  child: const Text("Station Back"),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 18.0),
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Expanded(
-                                flex: 2,
-                                child: MaterialButton(
-                                  onPressed: () async {
-                                    AwesomeDialog(
-                                      context: context,
-                                      dialogType: DialogType.question,
-                                      animType: AnimType.rightSlide,
-                                      title: 'Are you sure?',
-                                      desc: 'You want to take leave',
-                                      btnCancelOnPress: () {},
-                                      btnOkOnPress: () async {
-                                        controller.leave();
-                                      },
-                                      btnOkText: "Leave",
-                                      btnOkColor: Colors.purple,
-                                    ).show();
-                                  },
-                                  color: Colors.deepPurple,
-                                  height: (50.0),
-                                  textColor: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(7.0),
-                                  ),
-                                  child: const Text("Leave"),
-                                ),
-                              ),
-                              const SizedBox(width: 12.0),
                               Expanded(
                                 flex: 2,
                                 child: MaterialButton(

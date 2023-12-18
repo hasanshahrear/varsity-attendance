@@ -51,8 +51,8 @@ class LoginView extends GetView<LoginController> {
                               const EdgeInsets.only(left: 16.0, right: 16.0),
                               child: Column(
                                 children: <Widget>[
-                                  SvgPicture.asset(
-                                    'assets/svgs/logo.svg',
+                                  Image.asset(
+                                    'assets/images/logo.png',
                                     width: 100,
                                     fit: BoxFit.fitWidth,
                                   ),
@@ -86,37 +86,6 @@ class LoginView extends GetView<LoginController> {
                                     );
                                   }),
                                   const SizedBox(height: 15.0),
-                                  // Row(
-                                  //   children: [
-                                  //     Obx(() {
-                                  //       return Checkbox(
-                                  //         value: controller.rememberMeFlag.value,
-                                  //         onChanged: (value) {
-                                  //           controller.checkMark();
-                                  //         },
-                                  //         materialTapTargetSize:
-                                  //         MaterialTapTargetSize.shrinkWrap,
-                                  //         shape: RoundedRectangleBorder(
-                                  //           borderRadius:
-                                  //           BorderRadius.circular(5.0),
-                                  //           side: BorderSide(
-                                  //             color: Colors.grey.shade300,
-                                  //             width: 1,
-                                  //           ),
-                                  //         ),
-                                  //       );
-                                  //     }),
-                                  //     const Text(
-                                  //       "Remember me",
-                                  //       style: TextStyle(
-                                  //         color: Colors.black87,
-                                  //         fontWeight: FontWeight.w500,
-                                  //         letterSpacing: 1,
-                                  //       ),
-                                  //     )
-                                  //   ],
-                                  // ),
-                                  // const SizedBox(height: 10.0),
                                   Obx(() {
                                     return InkWell(
                                       onTap: () async {
